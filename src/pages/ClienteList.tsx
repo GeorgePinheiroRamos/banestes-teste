@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ClienteCard } from "./ClienteCard";
 import { useClientesData } from "../hooks/useClienteData";
+import { ClienteCard } from "../components/ClienteCard";
 
 const ITENS_POR_PAGINA = 5;
 

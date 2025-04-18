@@ -1,12 +1,16 @@
-import { ClienteList } from "./components/ClienteList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ClienteList } from "./pages/ClienteList";
+import ClienteDetalhes from "./pages/ClienteDetalhes";
 
-function App() {
+
+
+export default function App() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Clientes</h1>
-      <ClienteList />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ClienteList />} />
+        <Route path="/clientes/:id" element={<ClienteDetalhes />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
